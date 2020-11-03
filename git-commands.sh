@@ -2,6 +2,8 @@
 
 # add the files in the repo
 
-# commit the files and <optionally> add a comment 
+# show the differences in git
+
+# commit the files and <optionally> add a comment
 
 # push the changes  
