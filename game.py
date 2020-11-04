@@ -1,4 +1,5 @@
 import random
+#this is a [lite] game of blackjack. The concept is not to have a perfect game - but instead to see where you would make adjustments to make it closer to perfect. Read through the code and update the commented sections. Run the code in the terminal to understand how the game works. 
 
 def main():
 
