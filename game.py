@@ -17,7 +17,7 @@ def main():
 			hs = raw_input('Hit or Stay? (h/s): ')
 			while hs == "h":
 				playerHand = hit(remainingCards, playerHand)
-				print playerHand
+				print(playerHand)
 				if countHand(playerHand) > 21:
 					hs = "b"
 				else:
