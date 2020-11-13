@@ -3,15 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: createcustomer
 spec:
-  # A deployment's specification really only 
-  # has a few useful options
-  # 1. How many copies of each pod do we want?
   replicas: 2
-
-  # 2. How do want to update the pods?
-  #strategy: Recreate
-
-  # 3. Which pods are managed by this deployment?
   selector:
     # This must match the labels we set on the pod!
     matchLabels:
