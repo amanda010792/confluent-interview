@@ -69,7 +69,7 @@ def main():
 		for x in playerHand:
 			if(x[0:1] == 'A'):
 				handCount+=1
-				#question 2: ace can sometimes be 10 and sometimes be 1... how would you code this? 
+				#question 2: ace can sometimes be 11 and sometimes be 1... how would you code this? 
 			elif(x[0:1] == '1' or x[0:1] == 'J' or x[0:1] == 'Q' or x[0:1] == 'K'):
 				handCount+=10
 			else:
