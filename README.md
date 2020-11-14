@@ -1,5 +1,5 @@
-# interview-zach
-interview scripts for zach hamilton
+# confluent-interview
+interview scripts for confluent commercial interview process
 
 1) clone repo
 2) open up game.py and update the required fields, close the script and run the python code
