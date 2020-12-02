@@ -35,8 +35,9 @@ def main():
 				print('You lose, dealer wins. Your new total bank is ' + str(playerBank))
 				return playerBank
 			elif ((countHand(dealerHand)) == countHand(playerHand)):
-				playerBank+=(playerBet)
+				playerBank+=playerBet
 				print('Draw! Your new total bank is ' + str(playerBank))
+				return playerBank
 			else:
 				playerBank+=(playerBet*2)
 				print('You win. Your new total bank is ' + str(playerBank))
