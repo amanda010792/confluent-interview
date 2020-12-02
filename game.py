@@ -14,8 +14,8 @@ def main():
 			print('Player bet is ' + str(playerBet) + '. Bank total is now ' +str(playerBank))
 			playerHand=deal()
 			dealerHand=deal()
-			print('Dealer hand is ' + dealerHand[0] + " " + dealerHand[1])
-			print('Your hand is ' + playerHand[0] + " " + playerHand[1])
+			print('Dealer hand is ' + str(dealerHand)) #question 1: you should only show the second card from the dealer... update this code to do this.
+			print('Your hand is ' + str(playerHand))
 			hs = raw_input('Hit or Stay? (h/s): ')
 			while hs == "h":
 				playerHand = hit(remainingCards, playerHand)
@@ -27,7 +27,7 @@ def main():
 			while countHand(dealerHand) < 17:
 				dealerHand = hit(remainingCards, dealerHand)
 			print('Your hand is ' + str(playerHand))
-			print('Dealer hand is ' + str(dealerHand)) #question 1: you should only show the second card from the dealer... update this code to do this. 
+			print('Dealer hand is ' + str(dealerHand))  
 			if hs == "b":
 				print('You have busted. Dealer wins.')
 				return playerBank
