@@ -3,6 +3,7 @@
 import random
 #this is a [light] game of blackjack. The concept is not to have a perfect game - but instead to see where you would make adjustments to make it closer to perfect. Read through the code and update the commented sections. Run the code in the terminal to understand how the game works. 
 
+#playRound plays a single round of blackjack 
 def playRound(playBank, remainingCards): 
 		playerBank = playBank
 		cards = remainingCards
@@ -48,6 +49,8 @@ def playRound(playBank, remainingCards):
 			print('Bet must be less than Player Bank.')
 			playRound(playerBank)
 
+			
+#deal takes the remaining deck of cards and deals 2 random cards to the player
 def deal(remainingCards):
 	cards = remainingCards
 	playerHand = []
@@ -57,17 +60,18 @@ def deal(remainingCards):
 		playerHand.append(card)
 	return playerHand
 
-
-def hit(remainingCards, playerHand):
+#hit takes the given hand and adds a single random card to the hand and returns it
+def hit(remainingCards, hand):
 	deckSize=len(remainingCards)
 	card=remainingCards[random.randint(0,deckSize-1)]
 	remainingCards.remove(card)
-	playerHand.append(card)
-	return playerHand
+	hand.append(card)
+	return hand
 
-def countHand(playerHand):
+#countHand calculates the total score of the hand. 
+def countHand(hand):
 	handCount=0
-	for x in playerHand:
+	for x in hand:
 		if(x[0:1] == 'A'):
 			handCount+=1
 			#question 2: ace can sometimes be 11 and sometimes be 1... how would you code this? 
