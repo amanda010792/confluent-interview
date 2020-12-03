@@ -7,5 +7,5 @@ json_response = response.json()
 #parse out the latitude and longitude from the json_response
 #longitude=
 #latitude=
-#print('Longitude: ', longitude)
+print('Longitude: ', json_response["iss_position"]["longitude"])
 #print('Latitude: ', latitude)
