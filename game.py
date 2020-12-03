@@ -2,7 +2,7 @@
 
 import random
 #this is a [light] game of blackjack. The concept is not to have a perfect game - but instead to see where you would make adjustments to make it closer to perfect. Read through the code and update the commented sections. Run the code in the terminal to understand how the game works. 
-#please read through the code and provide answers to the questions on lines 18, 78 and 97
+#please read through the code and provide answers to the questions on lines 18, 83 and 102
 
 #playRound plays a single round of blackjack 
 def playRound(playBank, remainingCards): 
@@ -29,20 +29,22 @@ def playRound(playBank, remainingCards):
 				dealerHand = hit(cards, dealerHand)
 			print('Your hand is ' + str(playerHand))
 			print('Dealer hand is ' + str(dealerHand))  
+			playerScore = countHand(playerHand)
+			dealerScore = countHand(dealerHand)
 			if hs == "b":
 				print('You have busted. Dealer wins.')
-				return playerBank
-			elif ((countHand(dealerHand) > countHand(playerHand)) and (countHand(dealerHand) <= 21)):
+			elif playerScore == 21:
+				playerBank+=(playerBet*2.5)
+				print('You have blackjack. Your new total bank is ' + str(playerBank))
+			elif ((dealerScore > playerScore) and (dealerScore <= 21)):
 				print('You lose, dealer wins. Your new total bank is ' + str(playerBank))
-				return playerBank
-			elif ((countHand(dealerHand)) == countHand(playerHand)):
+			elif (dealerScore == playerScore):
 				playerBank+=playerBet
 				print('Draw! Your new total bank is ' + str(playerBank))
-				return playerBank
 			else:
 				playerBank+=(playerBet*2)
 				print('You win. Your new total bank is ' + str(playerBank))
-				return playerBank
+			return playerBank
 		elif playerBet <= 10 or playerBet >= 100: 
 			print('Bet must be between $10 and $100')
 			playRound(playerBank)
