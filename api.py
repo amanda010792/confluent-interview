@@ -9,3 +9,15 @@ json_response = response.json()
 #latitude=
 #print('Longitude: ', longitude)
 #print('Latitude: ', latitude)
+
+
+#json dump is below 
+
+# {
+#     "iss_position": {
+#         "latitude": "51.3947",
+#         "longitude": "-141.1441"
+#     },
+#     "message": "success",
+#     "timestamp": 1608322863
+# }
